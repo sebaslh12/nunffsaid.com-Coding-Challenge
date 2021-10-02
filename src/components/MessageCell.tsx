@@ -45,9 +45,9 @@ export const MessageCell: React.FC<MessageCellProps> = ({ message }) => {
 	}
 
 	return (
-		<Container priority={message.priority}>
+		<Container data-testid="message" priority={message.priority}>
 			<MessageText>{message.message}</MessageText>
-			<MessageButton onClick={handleDeleteMessage}>Clear</MessageButton>
+			<MessageButton data-testid="messageClear" onClick={handleDeleteMessage}>Clear</MessageButton>
 		</Container>
 	)
 }
